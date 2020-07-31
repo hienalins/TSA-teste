@@ -1,0 +1,306 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/* BASIC HTML SET UP */
+:root {
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  --dark-grey: #17222D;
+  --grey: #445566;
+  --light-grey: #EFF4F9;
+  --blue: #1188EE;
+}
+
+body{
+  color: var(--grey);
+	background:transparent;
+	text-shadow:none;
+	filter:none;
+	-ms-filter:none;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body::webkit-scrollbar {
+  width: 0.5rem;
+}
+body::webkit-scrollbar-track {
+  background: var(--dark-grey);
+}
+body::webkit-scrollbar-thumb{
+  background: var(--grey);
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+h1 {font-size: 4rem; margin: 0;}
+h5 {font-size: 1.2rem; margin: 0; font-weight: normal;}
+
+ul {margin: 0;}
+
+p {margin: 0;}
+
+header{
+  background: var(--dark-grey);
+  color: white;
+  width: 100%;
+  padding: 1.5rem 4rem;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+  header ul {
+    list-style: none;
+  }
+    header ul li a{
+      color: white;
+      text-decoration: none;
+    }
+    header ul li a:hover{
+      color: white;
+      text-decoration: none;
+    }
+    header ul li {
+      display: inline-block;
+      font-size: 1.2rem;
+      font-family: inherit;
+      font-weight: bold;
+      margin: 0 1.5rem;
+      width: 6rem;
+      text-align: right;
+    }
+    header ul li:first-child {
+      margin-left: 0;
+    }
+    header ul li:last-child {
+      margin-right: 0;
+    }
+
+footer {
+  background: var(--blue);
+  color: white;
+  width: 100%;
+  padding: 2.5rem 4rem;
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* CLASSES */
+.mt-1 {margin-top: 1rem}
+.mt-2 {margin-top: 2rem}
+.mt-3 {margin-top: 3rem}
+.mt-4 {margin-top: 4rem}
+.mb-1 {margin-bottom: 1rem}
+.mb-2 {margin-bottom: 2rem}
+.mb-3 {margin-bottom: 3rem}
+.mb-4 {margin-bottom: 4rem}
+
+.transition {
+  position: relative;
+}
+
+.animated {
+  position: absolute;
+  top: 0;
+}
+
+.std-btn {
+  color: white;
+  background: var(--blue);
+  margin: 1.5rem 0;
+  height: 3rem;
+  padding: 0 2rem;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: 'Nunito', sans-serif;
+  cursor: pointer;
+}
+
+.content-limiter {
+  width: 40%;
+  margin: 0 auto; 
+}
+
+header ul li:before {
+  content: "";
+  height: 0.5rem;
+  width: 0.5rem;
+  border: solid 2px white;
+  border-radius: 100%;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.1rem;
+  opacity: 0;
+}
+header ul li.marker:before {
+  opacity: 1;
+}
+
+.title-sec {
+  width: 100%;
+  padding: 1.5rem 0;
+  background: var(--light-grey);
+}
+.title {
+  font-family: 'Noto Serif', serif;
+  font-weight: 400;
+}
+.form-item label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.form-item input {
+  display: block;
+  margin-bottom: 1.5rem;
+  height: 3rem;
+  width: 100%;
+  color: var(--grey);
+  background: var(--light-grey);
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4);
+  font-weight: bold;
+  font-family: inherit;
+  padding: 0 1rem;
+  font-size: 1rem;
+}
+.column-spliter {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: baseline;
+}
+  .column-spliter .form-item {
+    width: 50%;
+    padding: 0 1rem;
+  }
+  .column-spliter .form-item:first-child {
+    padding-left: 0;
+  }
+  .column-spliter .form-item:last-child {
+    padding-right: 0;
+  }
+  .column-spliter label {
+    height: min-content;
+  }
+
+.vs__dropdown-toggle {
+  border: none !important;
+  background: var(--light-grey) !important;
+  padding: 0 !important;
+  box-shadow: 0px 2px 2px rgba(187, 204, 221, 0.4) !important;
+  cursor: pointer !important;
+}
+.vs__selected-options input{
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: pointer;
+}
+.vs__selected {
+  color: var(--grey) !important;
+  height: 3rem;
+  font-weight: bold;
+  font-family: inherit;
+  margin: 0 1rem !important;
+  font-size: 1rem;
+}
+.vs__search:not(:first-child) {
+  display: none;
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox label {
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.checkmark {
+  height: 1.2rem;
+  width: 1.2rem;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  border: 1px solid var(--blue);
+  margin-bottom: -2px;
+}
+
+.checkbox:hover input ~ .checkmark {
+  background-color: var(--light-grey);
+}
+
+.checkbox input:checked ~ .checkmark {
+  background-color: var(--blue);
+  border: none;
+}
+
+.checkmark:after {
+  content: "";
+  position: relative;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.checkbox .checkmark:after {
+  top: 0.4rem;
+  left: 0.4rem;
+  width: 0.45rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: white;
+} 
+
+#bol-div {
+  display: none;
+}
+
+.block-title {
+  color: var(--blue);
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 0.2rem solid var(--light-grey);
+  padding-bottom: 1rem;
+  margin: 1rem 0 3rem;
+  width: 100%;
+  display: block;
+}
+
+#lista table{
+  width: 100%;
+  border: solid 2px var(--light-grey);
+  border-collapse: collapse;
+}
+  #lista table th{
+    width: 25%;
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    border: solid 2px var(--light-grey);
+  }
+  #lista table td{
+    font-size: 0.75rem;
+    padding: 0.75rem;
+    padding-right: 0;
+    border: solid 2px var(--light-grey);
+  }
+  

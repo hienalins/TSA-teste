@@ -1,0 +1,79 @@
+@media screen and (max-width: 450px) {
+  :root {
+    font-size: 12px;
+  }
+  .content-limiter {
+    width: 90%;
+  }
+  .form-item label {
+    font-size: 1.5rem;
+  }
+  .form-item input {
+    height: 3.5rem;
+  }
+  .block-title {
+    font-size: 1.3rem;
+  }
+  footer {
+    justify-content: center;
+  }
+  .column-spliter .form-item {
+    width: 100%;
+    padding: 0;
+  }
+  .v-select {
+    margin-bottom: 1.5rem;
+  }
+  #lista {
+    min-height: 75vh;
+  }
+  #lista table th {
+    font-size: 1rem;
+  }
+  #lista table td {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 750px) {
+  :root {
+    font-size: 12px;
+  }
+  .content-limiter {
+    width: 90%;
+  }
+  .form-item label {
+    font-size: 1.5rem;
+  }
+  .form-item input {
+    height: 3.5rem;
+  }
+  .block-title {
+    font-size: 1.3rem;
+  }
+  footer {
+    justify-content: center;
+  }
+  #lista {
+    min-height: 75vh;
+  }
+  #lista table th {
+    font-size: 1rem;
+  }
+  #lista table td {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .content-limiter {
+    width: 80%;
+  }
+  #lista {
+    min-height: 80vh;
+  }
+  #lista table th {
+    font-size: 0.85rem;
+  }
+  #lista table td {
+    font-size: 0.85rem;
+  }
+}
